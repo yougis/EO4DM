@@ -1,0 +1,55 @@
+### French Version bellow - Version française à la suite
+
+Copyright (c) 2024, the environmental observatory of New Caledonia (OEIL)
+Developed by Mathis Nehauser (Insight) and Hugo Roussaffa (OEIL).
+This work was supported by The pacific fund for economic, social and cultural cooperation
+
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, 
+are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, 
+this list of conditions, and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, 
+this list of conditions, and the following disclaimer in the documentation 
+and/or other materials provided with the distribution.
+* Neither the name of the environmental observatory of New Caledonia  (OEIL)
+nor the names of its contributors may be used to endorse or promote 
+products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE ENVIRONMENTAL OBSERVATORY OF NEW CALEDONIA  (OEIL) AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE ENVIRONMENTAL OBSERVATORY OF NEW CALEDONIA  (OEIL) AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+--- Version Française ---
+
+Copyright (c) 2024, l'Observatoire de l'Environnement en Nouvelle-Calédonie (OEIL)
+Developpé par Mathis Nehauser (Insight/IRD) et Hugo Roussaffa (OEIL).
+Ce travail a été financé par Le Fonds de coopération économique, sociale et culturelle pour le Pacifique.
+
+Tous droits réservés.
+La redistribution et l'utilisation sous forme source et binaire, avec ou sans modification, sont autorisées à condition 
+que les conditions suivantes soient respectées :
+* Les redistributions du code source doivent conserver l'avis de droit 
+d'auteur ci-dessus, cette liste de conditions et la suivante mise en garde.
+* Les redistributions sous forme binaire doivent reproduire l'avis de droit d'auteur ci-dessus, 
+cette liste de conditions et la suivante mise en garde dans la documentation et/ou d'autres matériaux fournis avec la distribution.
+* Ni le nom de l'Observatoire de l'Environnement en Nouvelle-Calédonie (OEIL), ni les noms de ses contributeurs ne peuvent 
+être utilisés pour approuver ou promouvoir des produits dérivés de ce logiciel sans autorisation écrite spécifique préalable.
+
+
+CE LOGICIEL EST FOURNI PAR L'OBSERVATOIRE DE L'ENVIRONEMENT EN NOUVELLE-CALEDONIE ET LES CONTRIBUTEURS "TEL QUEL" 
+ET TOUTE GARANTIE EXPLICITE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, 
+LES GARANTIES IMPLICITES DE COMMERCIALISATION ET D'APTITUDE À UN USAGE PARTICULIER SONT DÉNIÉES. 
+EN AUCUN CAS, L'OBSERVATOIRE DE L'ENVIRONEMENT EN NOUVELLE-CALEDONIE ET LES CONTRIBUTEURS NE POURRONT ÊTRE TENUS RESPONSABLES DE TOUT DOMMAGE DIRECT,
+INDIRECT, ACCESSOIRE, SPÉCIAL, EXEMPLAIRE OU CONSÉCUTIF (Y COMPRIS, MAIS SANS S'Y LIMITER, 
+L'ACQUISITION DE BIENS OU SERVICES DE SUBSTITUTION ; LA PERTE D'UTILISATION, DE DONNÉES OU DE PROFITS ; 
+OU L'INTERRUPTION D'ACTIVITÉ) TOUTEFOIS CAUSÉE ET SUR TOUTE THÉORIE DE RESPONSABILITÉ, QUE CE SOIT EN CONTRAT, 
+RESPONSABILITÉ STRICTE, OU TORT (Y COMPRIS NÉGLIGENCE OU AUTRE) DÉCOULANT DE QUELQUE MANIÈRE QUE CE SOIT DE L'UTILISATION DE CE LOGICIEL, 
+MÊME SI INFORMÉ DE LA POSSIBILITÉ DE TELS DOMMAGES.

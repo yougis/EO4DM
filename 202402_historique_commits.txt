@@ -1,0 +1,563 @@
+* 3ab9c90	2024-02-26   fix(geostat): modification du notebook contexte OEIL
+* 324cf37	2024-02-20   Update chains run
+* e148d1c	2024-02-20   Bug alert : correct when single month processed (date_vect)
+* 20609a1	2024-02-20   Update auto bbox (global) : error if no data_histo and no input lat/lon
+* 6cbadee	2024-02-20   Update VAI time period extraction (mode=drought) and notebooks
+* b1da29e	2024-02-16   Update notebook GEE_SPI
+* 7ba9024	2024-02-15   Update auto bbox and export drive : use transform and bounds (global)
+* 663294d	2024-02-15   Add mode to main output run folder name (alert)
+* e19c639	2024-02-15   Add mode to main output run folder name (global)
+* 4db84e8	2024-02-15   Add mode to main output run folder name (local)
+* 6da379d	2024-02-15   Add tile names in main run output folder name
+* dc55d16	2024-02-15   Error TCI : LST count global matrix
+* 2ee998c	2024-02-14   Treat when missing band 2 (LST, NDWI) in TCI/VCI
+* aa834de	2024-02-14   Add comments on Processing Alert main function
+* fc97d2f	2024-02-14   Bug due to date_vect month list in moisture deficit (alert)
+* f0a1c96	2024-02-14   Update config period (check products alert)
+* bda38bf	2024-02-14   Update print auto process period (alert)
+* 859e985	2024-02-14   Change ftp_dir copernicus (ascat)
+* 039b514	2024-02-14   Relaunch chains
+* daa2658	2024-02-14   Launch chains
+* 8fb7d7f	2024-02-14   Last errors
+* 0b51070	2024-02-14   Launch chains
+* 5c44034	2024-02-14   Wrong type of LANDMASK_ROI input param and setting nan in clipdata (local)
+* b5c64bc	2024-02-13   Add notebooks time series (meteo gee) and update aggregate station (spi, spei)
+* 00cd666	2024-02-09   Update alert : add key_stats reading param
+* af26660	2024-02-09   Update control VAI computation if single year (continue)
+* 546d65d	2024-02-09   Set landcover optional for spatial stats, add KEY_STATS in config
+* 2a519d3	2024-02-09   Last updates
+* 1e6659d	2024-02-09   Last updates
+* 565d13a	2024-02-09   Last updates
+* 42822a9	2024-02-09   [DOC] Update readme
+* 853f1be	2024-02-08   Add notebooks METEO GEE (SPI, ETr)
+* 6f138d9	2024-02-08   Re-launch all chains
+* eecdbfb	2024-02-08   Launch all chains + Update config
+* 65bc212	2024-02-08   Remove old dir
+* 054d463	2024-02-07   Update Territory_str in preprareRunfolders (local, global)
+* f2b12c2	2024-02-06   Relaunch chains
+* d1f9d59	2024-02-06   [Bug] Missing TCI file (global)
+* e3ace80	2024-02-06   Add gee error control : Service unavailable
+* 487baf3	2024-02-06   Delete old dir (histo)
+* 0f33009	2024-02-06   Delete old dir codes
+* 007c1f2	2024-02-05   Last updates
+* f8f4e99	2024-02-05   Last updates
+* 826541e	2024-02-05   Bug annex path
+* f25a8e7	2024-02-05   Update control input optional variables ('')
+* d18b137	2024-02-05   Last updates
+* 00c26bf	2024-02-05   Bug (dockercompose) : deleting variables without values (defaults)
+* 107f980	2024-02-05   Launch all chains
+* 95c1239	2024-02-02   Last updates
+* 5c844b4	2024-02-02   Wrong dates (L8, S2) in collection gee table (local)
+* 6df24f8	2024-02-02   Add another gee control error : Connection aborted
+* d8eb052	2024-02-02   Add Auto setting processing BBOX (global)
+* f2c3e0c	2024-02-01   [DOC] Update README
+* 89e4a5b	2024-02-01   Last updates
+* 6848f85	2024-02-01   [DOC] Add algo chains
+* 64f962e	2024-02-01   Last updates
+* 235e7cb	2024-02-01   Add MODIS V21A1D preprocessing functions and test notebooks
+* bb5a5d1	2024-01-30   Add VIIRS preprocessing functions and test notebooks
+* e27cace	2024-01-29   Updates
+* deb5c42	2024-01-29   Updates
+* a1eb891	2024-01-29   [DOC] Last updates
+* c0182d8	2024-01-29   [DOC] Test adding algo diagram (global)
+* e0f0f36	2024-01-29   [DOC] : add image ('schema general') to README
+* f8400db	2024-01-29   Add comment for END MAIN SCRIPT
+* bb44563	2024-01-29   Last updates
+* bbcd490	2024-01-29   Move work_dir to prepare_DATAfolder (alert)
+* bf48c53	2024-01-29   Bug : Update control period string (according to modes)
+* 1a35e70	2024-01-29   Bug : annex_dir, config param (clean_runfolder)
+* 4000941	2024-01-26   Update README
+* 6d57737	2024-01-26   Update doc and code
+* 68d1931	2024-01-25   Run all except local nc
+* 060935b	2024-01-25   Run alert nc
+* 8f58758	2024-01-25    Update readme and config variables (opt)
+* c3c102e	2024-01-25   Stop all chains and fix alert annex problem
+* 15d4f45	2024-01-25   Remove print (alert prepare folders)
+* 89b40bc	2024-01-25   Bug annex_dir alert : fix problem (territory_str)
+* f335e2b	2024-01-25   Bug annex_dir alert : Test print
+* 6379959	2024-01-25   CI PACIFIC : launch all and NC
+* 9c251fb	2024-01-25   Bug exportImagetoAsset (local) : add waiting/retry procedure
+* b031e76	2024-01-25   Bug exportImagetoAsset (local) : error loading, add while to control/retry
+* 6b686b5	2024-01-25   Bug computeNanscores (local) : wrong path2key input param
+* 5a81afa	2024-01-24   Last updates
+* 7ad0677	2024-01-24   Copy to data_histo of new indices/indicators is done as the pipeline progresses (local)
+* 50504fa	2024-01-24   Copy to data_histo of new indices/indicators is done as the pipeline progresses (global)
+* 0836fee	2024-01-24   Remove go_month commented lines on local chain
+* 9ffee17	2024-01-24   (Re)add month_composite_modis function (for notebooks if needed)
+* b4917a4	2024-01-24   Add google control error on all getInfo calls
+* d448dfd	2024-01-24   Compute month composite within gee preprocessing/decade compositing steps (global)
+* 9283277	2024-01-24   Fix crs modis
+* 86dc84e	2024-01-24   Fix crs modis (global, docker-compose, config)
+* 847f33c	2024-01-24   Last updates
+* 22c9638	2024-01-24   Bug google error connection : update export image (asset, drive)
+* 70512c3	2024-01-24   Bug Google connection error
+* 230e1b6	2024-01-23   Launch
+*   b1aa176	2024-01-23   Merge branch 'regional-pipeline'
+|\  
+| * 130a3e6	2024-01-23   Launch
+* | 4cca822	2024-01-23   Merge branch 'regional-pipeline'
+|\| 
+| * f35a451	2024-01-23   Add filter tiles_L (auto period, local) : single landsat tile
+* | e2e3604	2024-01-23   Stop
+* | 2679da8	2024-01-23   Kill dockers (except pf)
+|/  
+* 8cd22d3	2024-01-23   Bug annex dir path : add territory_str
+* 43bd2bb	2024-01-23   Test (Fiji)
+* 97b37f3	2024-01-23   Test (Fiji)
+* 168f55f	2024-01-23   Bug Annex_dir Landsat_grid (local) : remove territory_str in path
+* f5378ee	2024-01-23   CI PACIFIC : test launch only FJ, VU, PF
+* 2c2b83b	2024-01-23   Error annex_dir (config_process.env)
+* fe9c053	2024-01-23   CI PACIFIC : Add dockers tiles Fiji (74072, 74073)
+* 6f5dd71	2024-01-23   Bug territory_str (global, alert)
+* e4a4542	2024-01-23   Bug territory_str (global)
+* 26bf6c2	2024-01-23   Ci PACIFIC : error period_end_d_inclu (global gee)
+* b613c4f	2024-01-23   CI PACIFIC : forgot volume (docker-compose)
+* 8fe85d2	2024-01-23   CI PACIFIC : update
+* c0e669d	2024-01-23   CI PACIFIC : add Vanuatu and Polynesia (Tahiti) dockers (global)
+* 27d5907	2024-01-23   Stop all chains
+* 136464f	2024-01-22   Add Quality control and Output products table (file)
+* 6110ebd	2024-01-22   Generate/control histo/annex folders (Alerts)
+* 44eefcc	2024-01-19   Add Generate histo folders function to local chain and update tiles and period control (if empty)
+* 6801343	2024-01-19   Generate/control histo/annex folders and add ANNEX_Data
+* 70de0c4	2024-01-19   Add L7 preprocessing for recent period (depends on Territories)
+* 5f5c3c0	2024-01-18   [DOC] Last updates
+* 78f3e4a	2024-01-18   [DOC] Update pipeline use modes designation ("test" and "Service-Régulier")
+* 9c4beb7	2024-01-18   [DOC] Update CI and moves part to Docker
+* 93909fb	2024-01-18   [DOC] Change pipeline use modes designation ("test" and "continue")
+* f04260d	2024-01-17   [DOC] Update Readme
+* 9eb02d3	2024-01-17   [DOC] Update Readme and Config process (comments)
+* a93ee06	2024-01-16   Gee compositing (local) : add compM (current month)
+* 7c61acc	2024-01-12   Update : delete prints (test tiles_s2)
+* 1f2784f	2024-01-12   Bug Tiles_S2 list (update)
+* 65c9409	2024-01-12   Test TIles_S2
+* 8c63a7a	2024-01-12   Update auto period (local) : if data_histo empty, go_process set to 1
+* ab91d88	2024-01-12   CI PACIFIC : update Fiji docker tiles list (local)
+* f6c8ca4	2024-01-12   CI PACIFIC : add Fiji docker (local)
+* 30ff013	2024-01-10   CI PACIFIC : add Fiji docker (global)
+* aa28e0e	2024-01-10   Comment TZ (dockerfile) : not used since no cron
+* 664b901	2024-01-10   Update print "Start script" (all)
+* b3a4440	2024-01-10   Update check gee products (global) : period_end_d_inclu
+* ca3b0d2	2024-01-10   Add asset_export option for Landsat and/or S2 products (V2)
+* 42f970c	2024-01-06   Add asset_export option for Landsat and/or S2 poducts (to avoid gee overload)
+* cc2b404	2024-01-06   Add asset_export option for Landsat and/or S2 (to avoid gee overload)
+* a4e872f	2023-12-28   Update check gee products (local) : period_end_d_inclu
+* 0d3c561	2023-12-28   Test 1
+* 764e21a	2023-12-28   Update auto period (local) : bug last decade
+* 75347a4	2023-12-11   last updates (launch all chains)
+* 135e809	2023-12-11   update check products gee (local)
+* 59018fd	2023-12-11   launch all (except local)
+* 47665fb	2023-12-11   Stop chains (except alert)
+* a5a7111	2023-12-11   launch chains (global, alert)
+* b67976b	2023-12-11   Test chains
+* 02008f8	2023-12-11   last updates and auto process (global, alert), stop (local)
+* ed056ae	2023-12-11   auto setting period (alert) : fix period_end error (set hours to 0)
+* 5650724	2023-12-11   update alert downloading products : permission error
+* 97e985b	2023-12-08   last updates
+* 0e3048c	2023-12-08   update name new meteo products (download, alert)
+* f11188b	2023-12-08   update alert data frames (v2)
+* ef47740	2023-12-08   Update alert data frames data histo
+* 03ab1d3	2023-12-08   Last updates : alert and co
+* 499bee0	2023-12-06   Last updates all
+* 192f8b5	2023-11-23   Local chain : error main folder name
+* d1ac6d5	2023-11-23   Error local chain : invert dict and list for setting empty
+* a70fb6d	2023-11-23   Error main script alert
+* 8319710	2023-11-23   Error main scripts
+* dab991a	2023-11-23   Global = Auto, Local = Drought, Alert = Auto
+* 521a4ca	2023-11-23   Update main scripts (global,local,alert): add modes parametrization
+* dbc7c95	2023-11-23   Update Prepare folders (Alert)
+* 41ab30a	2023-11-23   Bug local chain : wrong annex dir name
+* 911b41e	2023-11-22   Error alert v2
+* 1a9da72	2023-11-22   Bug alert : remove territory from output of checkInitProducts
+* a894354	2023-11-22   Auto mode all chains
+* 74ee2a8	2023-11-22   Stop all chains
+* c3098be	2023-11-22   Last updates : reprojection local indices, ...
+* 20fe15e	2023-11-21   Preprocessing MODIS : add option to read asset if already processed
+* c9e3076	2023-11-20   Auto mode (error alert chain)
+* de7a336	2023-11-20   Update auto setting period (global)
+*   4d227f5	2023-11-17   Merge branch 'master' of https://dev.azure.com/Oeilnc/EO4DM/_git/EO4DM
+|\  
+| * 8cb2689	2023-11-17   test pipeline
+| * 9db779e	2023-11-17   Updated azure-pipelines.yml
+| * 94a6e1e	2023-11-17   Updated azure-pipelines.yml
+| * bee862c	2023-11-17   Updated azure-pipelines.yml
+| * 96f1f99	2023-11-17   Updated azure-pipelines.yml
+| * b5c75f8	2023-11-17   Updated azure-pipelines.yml
+| * edde87f	2023-11-17   Updated azure-pipelines.yml
+| * d90b778	2023-11-17   fix(CI): condition lancement suppression orphelin
+| * 9c8acdf	2023-11-17   fix(CI): displayname
+| * efe96a1	2023-11-17   feat(CI): supprésion des image orpheline, nomage des script de la CI
+* | 309e6a5	2023-11-17   Lauch all dockers (chains)
+|/  
+* 18d9527	2023-11-15   Stop all dockers
+* 8793a95	2023-11-14   Update automatic setting period (global)
+* 43fe548	2023-11-14   add try/except (block, vai) to avoid key error
+* 91675c9	2023-11-14   Few modifs
+* 80228ac	2023-11-03   update setup ftp accounts package
+* 85383c6	2023-11-03   Add Alert Chain Docker
+* 25128b8	2023-11-03   Update alert chain : check products
+* 3696a27	2023-11-02   alert chain : add check METEO products
+* 47b2406	2023-11-02   alert chain : test auto setting period AND check ASCAT availability
+* 14a0db0	2023-10-31   alert chain: add auto setting period (V2)
+* d9c1f5b	2023-10-31   alert chain: add auto setting period
+* c5095cf	2023-10-26   error logging print
+* caa2007	2023-10-26   update control run : no run_status txt file
+* 02bc361	2023-10-26   add time import
+* 82a9d72	2023-10-26   updating codes for local processing modes (auto, manual, drought, indices)
+* 3ffa2cf	2023-10-25   auto check gee products (local) : first update
+* 1b03628	2023-10-24   control global : launch auto mode
+* 44cafef	2023-10-24   test control with auto mode
+* e3cabdb	2023-10-24   test control with "return code" (subprocess)
+* 0914f2b	2023-10-24   stop dockers
+* 74b5466	2023-10-24   test control : manual, every minutes
+* 2ebd26d	2023-10-24   test control with cron (every minutes)
+* 287f718	2023-10-24   test with "while" in control script
+* 4532def	2023-10-24   test subprocess (v2)
+* 5d12501	2023-10-24   update control : test with subprocess
+* 3835cdb	2023-10-24   test run auto once : test output logs
+* 362b413	2023-10-24   test control (v2)
+* b442c67	2023-10-24   test control_run
+* dfa6d91	2023-10-24   test control_run
+* 8da6b61	2023-10-24   update entrypoint
+* d1686e3	2023-10-24   update entrypoint and control_run
+* 65e46d5	2023-10-24   update entrypoint (V2)
+* c6494c1	2023-10-24   update entrypoint (V2)
+* a446e4f	2023-10-24   update entrypoint
+* 2b6bca5	2023-10-24   add control script to test running status of processing chain (in dockerfile)
+* 2d12a45	2023-10-24   update automatic processing : add auto mode (V2)
+* 6a26fe0	2023-10-23   update automatic processing : add auto mode
+* eb04ee9	2023-10-20   update exportImage control error procedure
+* ffda3c0	2023-10-20   update checkHISTO function (global)
+* 631e076	2023-10-20   update copy permission procedure vai to data histo
+* d20f631	2023-10-19   add checkHISTO function (global, local)
+* 05ade4c	2023-10-19   last updates (details)
+* eff6dc9	2023-10-19   Update geostats processing (V2) : add areas_key param
+* 228d86b	2023-10-17   remove warnings VAI block computing (window)
+* eb6cb15	2023-10-17   Update geostats processing : add areas_key param
+* 61e33b3	2023-10-17   update reprocess mode (global, local) : add selection tiles_L (local)
+* 92560ef	2023-10-16   update geostats processing
+* 99f2490	2023-10-16   bug ci (global) : correct geostats processing input param
+* 8d17c78	2023-10-13   update Config_process
+* eb8287c	2023-10-13   update local drought chain
+* ea84beb	2023-10-13   update config
+* 7b9cfcf	2023-10-13   local chain : add landsat_proj param to gee processing
+* b533a06	2023-10-13   reduce nb_wait max (check gee products)
+* 1a8753f	2023-10-13   update (V3) google error controls : add generic function
+* 75beca4	2023-10-12   update (V2) google error controls : add generic function
+* 8ad57c9	2023-10-11   alert chain : combine drought products
+* 16e2102	2023-10-10   alert chain : complete process MAI (and geo stats)
+* 47469df	2023-10-10   update config process : add landmask_roi param for clipping products
+* fe17e66	2023-10-10   update config process : add landmask_roi param for clipping products
+* 0794f7b	2023-10-06   update (V2) google error controls : add handling error 'image.load'
+* cd59aab	2023-10-06   update google error controls : add handling error 'image.load'
+* 247397a	2023-10-06   update (V2) loose google authentif procedure (main/composite functions)
+* fe65f55	2023-10-06   month composite modis (global) : update scale out param
+* fac1c2b	2023-10-05   update (V2) decade end/start controls (local)
+* 2f71d1a	2023-10-05   update decade end/start controls (local)
+* 74c9147	2023-10-05   update logging info : decade to process (check gee products)
+* c4a2097	2023-10-05   update loose google authentif procedure (main/composite functions)
+* e998802	2023-09-29   alert chain : draft process MAI
+* 082d458	2023-09-29   alert chain: update swi preprocessing and geostats masks
+* 68c7a16	2023-09-29   improve loose google authentif procedure (main/composite functions)
+* d861732	2023-09-29   bug continue (local) : increase nb_waitmax to 10
+* de73e51	2023-09-29   bug ci (global) : update histo stats v2
+* ea8f477	2023-09-29   bug ci (global) : update histo stats
+* cef6ad3	2023-09-28   alert chain : swi preprocessing
+* 7612a90	2023-09-27   count composite landsat_S2 : add Total when decade compositing
+* dfba853	2023-09-26   add procedure for automatic saving of vhi stats to data_histo (global)
+* a66bbe9	2023-09-26   update loose google authentif procedure (local check)
+* 7cb2317	2023-09-26   update notebook (modis) : scale_out param
+* 9f5b048	2023-09-26   updates global vhi : error  vci/tci files association
+* 739ea2f	2023-09-22   error LST band name (modis)
+* b7f8e64	2023-09-22   TEST GLOBAL HISTO 1KM
+* a5f1cfa	2023-09-22   bug ci (local) : update decade end/start controls
+*   48ee4eb	2023-09-21   Merge branch 'regional-pipeline'
+|\  
+| * ba069f0	2023-09-21   bug ci (local) : update decades start/end at period limits
+| * 45a6243	2023-09-21   bug ci (local) : update gee re-authentif procedure
+* | c4574b2	2023-09-19   Merge branch 'regional-pipeline'
+|\| 
+| * 4479de8	2023-09-19   test local chain (continue) : que gee compositing (pas vai)
+* | 68198c2	2023-09-19   Merge branch 'regional-pipeline'
+|\| 
+| * 7659d44	2023-09-19   decade compositing landsat-s2 : reset decade range to normal
+* | f130999	2023-09-19   Merge branch 'regional-pipeline'
+|\| 
+| * 5d6ec82	2023-09-15   update alert : initializing ascat collection
+| * 1c0b9df	2023-09-15   update vhi spatial stats : add go_stats param to allow/avoid computing
+| * aed0779	2023-09-12   alert package : add collecting/preprocessing input ascat products
+| * 148865d	2023-09-11   bug ci (local) : update date format for date extend compositing
+* | 38f412e	2023-09-06   Merge branch 'regional-pipeline'
+|\| 
+| * ba4e8d4	2023-09-05   add ALERT Package
+* | 7422dd5	2023-09-04   Merge branch 'regional-pipeline'
+|\| 
+| * a0018d0	2023-09-04   test CI continue : global (all), local (only gee compositing)
+| * a2431e9	2023-09-04   add logging cloud cover : preprocessing functions
+| * 280ad24	2023-09-04   update preprocessing (local): if product exists, keep Qa table filling
+| * a2b2078	2023-09-04   update composites count file (local) : error input var tiles_L
+| * bb7317e	2023-09-01   update loggings preprocessing functions
+| * 0f887a7	2023-09-01   update tiles_s2 listing : error in function extract s2 tiles
+| * 5a63fa4	2023-09-01   update config env : add s2 tiles list over NC
+| * 44d7fa6	2023-09-01   update extractcollection tiles s2 : del error
+| * 7fae79e	2023-08-31   update preprocessing (local) : check if gee products already processed
+| * 378fcf5	2023-08-31   update scale_out to 10m resolution (local)
+* | 2d54932	2023-08-31   Merge branch 'regional-pipeline'
+|\| 
+| * e16c176	2023-08-31   add checkfolder function (local): avoid reprocessing decade
+| * b22ea92	2023-08-31   add checkfolder function (global): avoid reprocessing decade
+| * b50a289	2023-08-31   update notebook
+* | 4e97193	2023-08-31   Merge branch 'regional-pipeline'
+|\| 
+| * 35cd676	2023-08-31   update process vhi : consider only current decade
+* | 68054c7	2023-08-30   no clean drought folder
+* | b58396a	2023-08-30   clean drought folder
+|/  
+* d0da7d5	2023-08-30   Update vhi processing : launch month only if new month composites
+* bc3f0c1	2023-08-30   bug automatic copy/paste vhi : verify if file exists
+* ec1d716	2023-08-25   update config process : launch continue global
+* 4c583aa	2023-08-25   add automatic copy/paste of new vhi-vai files to data histo
+* ec7836d	2023-08-25   update processing vhi : wrong months identification
+* 3e7e2af	2023-08-25   remove unused files dmpipeline
+* c81ebb5	2023-08-25   bug ci (global): update process vhi with good month to find
+* 57b3e50	2023-08-25   bug ci (global): update check gee modis (aqua, terra)
+* 5aa4bf1	2023-08-24   bug ci : timedelta format V2 in check gee (global)
+* 0ee7555	2023-08-23   bug ci : timedelta format in check gee (global)
+* 7df4811	2023-08-22   Test run global chain : mode continue
+* e1d4f2e	2023-08-22   bug vai process: add count=2 to profile_like
+* bb6fdc8	2023-08-22   config global chain : reduced histo mode
+* 8ee7365	2023-08-22   change print loggs : vhi and vai processing functions
+* 12036d0	2023-08-18   remove print logs vai processing functions
+* aac589c	2023-08-18   update notebook (drought global) : configure input env
+* e816553	2023-08-18   add prints log
+* e5e9923	2023-08-18   add reprocess vhi histo function (main, setup)
+* 98ac7ec	2023-08-18   global_mode=histo, local_mode=stop, update vhi function (move composites to data_histo)
+* 8f79981	2023-08-17   last last update
+* 234bfca	2023-08-17   last update
+* 774698b	2023-08-17   test wrong input mode entrypoint (docker file)
+* cede843	2023-08-17   update run_gee_local : proj_out from merged landsat cols
+* ae57c68	2023-08-17   Test full HISTO : global (all), local (single tile)
+* ff43022	2023-08-17   test historic mode on reduced period and single tile
+* 1f92998	2023-08-17   update prints
+* 2e399ce	2023-08-17   test prints
+* 0bb3d72	2023-08-17   add sys.exit
+* 96991aa	2023-08-17   update output check gee products : add territory
+* c719997	2023-08-17   reading territory name : .replace to delete double quotes
+* dab722f	2023-08-17   reading territory name : add re.sub to delete double quotes
+* f0ced1c	2023-08-17   update reading config[territory]: add .split
+* 96431d8	2023-08-17   change territory quotes
+* d3a7c07	2023-08-17   update print
+* e02f40d	2023-08-17   update entrypoint (mode historic): add saving env variables
+* 095c03a	2023-08-17   update territory and add print
+* 78627c9	2023-08-17   update region to territory name (docker compose)
+* 82c3281	2023-08-17   test with my gee account
+* f23f332	2023-08-17   update print
+* e56d815	2023-08-17   update print
+* 8725a7b	2023-08-17   update print
+* ac2b605	2023-08-17   update print
+* f6ea3da	2023-08-17   test with single input landsat tile
+* 98d0bf8	2023-08-17   print check products (update)
+* 8f8d180	2023-08-17   print check products (update)
+* 37a9c4e	2023-08-17   print check products
+* 3c1aebd	2023-08-17   test period format reading
+* 23bcf83	2023-08-17   test config env reading
+* 85b6779	2023-08-17   bug entrypoint
+* 17c0f60	2023-08-17   add entrypoint file (docker)
+* 415066d	2023-08-17   add entrypoint file (docker)
+* 21985bf	2023-08-17   update docker file cmd
+* 3e1d408	2023-08-17   update docker file cmd
+* 5aa708c	2023-08-17   update docker file cmd
+* 35cab18	2023-08-17   update docker file cmd
+* bdaec59	2023-08-17   update docker file cmd
+* 065d5b7	2023-08-17   update docker file cmd
+* d0c4840	2023-08-17   update docker file cmd
+* 7deeb29	2023-08-17   dockerfile cmd: remove schedule
+* 2dd6269	2023-08-17   update dockerfile cmd historic
+* 39bd337	2023-08-16   move extractGeoStats function to geostats package
+* 72a0d1d	2023-08-16   update vai process function : add comments on reprocess mode
+* b98b240	2023-08-16   updates : perdio input format, add reprocess mode
+*   1dfbb60	2023-08-16   Merge branch 'add-GEE-pipeline'
+|\  
+| * 296961c	2023-08-16   bug ci : syntax error (dockerfile)
+* | 6e92511	2023-08-14   Merge branch 'add-GEE-pipeline'
+|\| 
+| * 85c5f75	2023-08-14   bug ci cmd line : dockerfile
+* | e96a48b	2023-08-14   Merge branch 'add-GEE-pipeline'
+|\| 
+| * 05c0a3a	2023-08-14   dockerfile : separate continue/historic run mode (cron or not)
+* | b6ab1f1	2023-08-14   Merge branch 'add-GEE-pipeline'
+|\| 
+| * 17d04a9	2023-08-14   bug ci (local chain): comp_nanscores error
+* | c3a81cd	2023-08-12   Merge branch 'add-GEE-pipeline'
+|\| 
+| * c238143	2023-08-12   bug ci : delete check prints global chain
+| * e15b0f7	2023-08-12   bug ci : update config reading period
+* | a2902bb	2023-08-09   update config : test historic mode nc (global + local)
+* | de694db	2023-08-09   Merge branch 'add-GEE-pipeline'
+|\| 
+| * 9891f84	2023-08-09   update docker-compose : add annex_dir
+* |   6302e17	2023-08-09   Merge branch 'master' of https://dev.azure.com/Oeilnc/EO4DM/_git/EO4DM
+|\ \  
+| * | 2f34d47	2023-08-08   Renamed GEOSTATS_processing to GEOSTATS_Processing
+* | |   50ce2ec	2023-08-09   Merge branch 'add-GEE-pipeline'
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * d5f7f53	2023-08-09   update install package (setup): geostats name
+| * f11206d	2023-08-08   Renamed GEOSTATS_processing to GEOSTATS_Processing
+* | 07314a2	2023-08-08   Merge branch 'add-GEE-pipeline'
+|\| 
+| * f6a1f7d	2023-08-08   update name geostats package
+* | 9116fab	2023-08-08   Merge branch 'add-GEE-pipeline'
+|\| 
+| * b519226	2023-08-08   update land_masks package (GEOSTATS_processing): compute masks
+| * 0e4cefd	2023-08-08   add land_masks package and geostats function for global chain
+* | 73fa1c9	2023-08-08   Merge branch 'add-GEE-pipeline'
+|\| 
+| * 7d79ab3	2023-08-08   change input tiles format: list in config_process.env
+* |   a020064	2023-08-04   Merge branch 'master' of https://dev.azure.com/Oeilnc/EO4DM/_git/EO4DM
+|\ \  
+| |/  
+|/|   
+| * 579be9a	2023-08-03   doc(EO4DM): précision et lien vers la doc de déploiement de l'infra
+* | 1e6ccd1	2023-08-04   update config_process.env
+* | 263a5d3	2023-08-04   BUC CI fixed local : update input listLandsatTiles (no s2 dataset)
+* | 8f4c7f4	2023-08-04   change export drive folder name : notebooks
+|/  
+* 1c0d648	2023-08-03   change export drive folder name : local or global
+* 5f342f2	2023-08-03   BUG CI fixed (local) : due to input tile s2 config format
+* aff2182	2023-08-03   Set user access directories : update permission to 00777
+*   88ecb00	2023-08-03   Merge branch 'add-GEE-pipeline'
+|\  
+| * 0091437	2023-08-03   update input tile var
+| * 87777cc	2023-08-03   Change last "prints" to "logging.info"
+| * d9395af	2023-08-03   BUG CI fixed: due to input grid config format (expect number)
+| * 597888e	2023-08-02   remove logging filename output log file
+| * e5f23a6	2023-08-02   define setuptool lib version
+* | 3c49515	2023-08-01   update gee_accouts to oeil
+|/  
+* 1a26f28	2023-08-01   Test logging global chain : add filename of output file log
+* 182e86b	2023-07-31   update setup.py : commments packages install_requires
+* 43b59bb	2023-07-31   update composite : count is filled with 0 for nan values
+* 2e60fea	2023-07-25   update local export image : set scale to s2 10m scale
+* e4dd5f1	2023-07-25   update tile name in exported landsat_s2 indice name
+* 6f6b952	2023-07-25   update export image to asset : read already processed products
+* 7193f8b	2023-07-24   update local compute nanscore : set input scale
+* fbd0b76	2023-07-21   update export_folder
+* 21940c6	2023-07-21   replace print by logging.info
+*   850c4fc	2023-07-21   Merge branch 'add-GEE-pipeline' of https://dev.azure.com/Oeilnc/EO4DM/_git/EO4DM into add-GEE-pipeline
+|\  
+| * acf8be9	2023-07-20   fix(env): add WRK_DIR var
+| *   3dac103	2023-07-20   Merge remote-tracking branch 'origin/add-GEE-pipeline'
+| |\  
+| | * 737307f	2023-07-20   ci(typo): fix
+| * | 1088c86	2023-07-20   Merged PR 8: fix(typo): add quotes
+| |\| 
+| | * 6f6f0ad	2023-07-20   fix(typo): add quotes
+| * | b754670	2023-07-20   Merged PR 7: feat(env): use env var from CI
+| |\| 
+| | * be9aeca	2023-07-20   feat(env): use env var from CI
+| * | 7567116	2023-07-20   Merged PR 6: ci(prod): fix isPROD var
+| |\| 
+| | * 6562a68	2023-07-20   ci(prod): fix isPROD var
+| * | d8c547b	2023-07-20   Merged PR 5: Merge master
+| |\| 
+| | * 43d2b71	2023-07-20   ci(local): add local script into compose
+* | | f58ce85	2023-07-21   last updates
+| |/  
+|/|   
+* | 0aaa222	2023-07-20   update check products functions
+* | 0c5cc93	2023-07-12   update outdir_paths
+* |   51fb807	2023-07-12   Merge branch 'add-GEE-pipeline' of https://dev.azure.com/Oeilnc/EO4DM/_git/EO4DM into add-GEE-pipeline
+|\ \  
+| * | 4fff8c1	2023-07-12   ci(pool): deploy on prod if master and on prod if tags
+* | | 1c997f5	2023-07-12   Merge branch 'add-GEE-pipeline' of https://dev.azure.com/Oeilnc/EO4DM/_git/EO4DM into add-GEE-pipeline
+|\| | 
+| * | 57f8bcd	2023-07-11   fix(cron): source env before running cron
+| * | 2704d90	2023-07-11   fix(tz): specify timezone in env var
+| * | 23f5fcc	2023-07-11   fix(tz): specify timezone in env var
+| * | 75038a7	2023-07-11   fix(log): use french layout for datetime
+| * | 67e68d6	2023-07-11   feat(log): use logging package instead of print
+| * | 220a272	2023-07-11   ci(trigger): trigger pipeline only on master branch
+| * | 2b7b963	2023-07-11   ci(test): add new commit to test manual triggeer
+| * | c8275e4	2023-07-11   ci(manual): don't trigger automatically
+| * | 02d19f5	2023-07-10   fix(schedule): run script daily
+| * | a7d5afd	2023-07-10   fix(conda): install setup in conda env
+| * | 9e201be	2023-07-10   ci(trigger): enable trigger
+| * | 849467f	2023-07-10   ci(fix): install setup before running script
+* | | e5ef490	2023-07-11   update eo4dm_service_key and data_histo path VHI process
+|/ /  
+* | 58025bc	2023-07-10   Update setup.py file and Config_process.env file
+* | b177c31	2023-07-10   export image to asset : add try-except authentif
+* | 390542b	2023-07-07   Update setup.py file and packages import
+* | 2dd9603	2023-07-07   Update setup.py file
+* | a44c052	2023-07-07   Test add Config_process .env file
+* |   dc012f0	2023-07-05   Merge branch 'add-GEE-pipeline' of https://dev.azure.com/Oeilnc/EO4DM/_git/EO4DM into add-GEE-pipeline
+|\ \  
+| * | 1dba6f0	2023-07-04   ci(example): update example scheduling
+| * | 44e9deb	2023-07-03   ci(fix): remove unused volume
+| * | 7745808	2023-07-03   ci(logs): redirect script logs to container output
+| * | 11c66d2	2023-07-03   doc(ci): update doc
+| * | 9e0f2f6	2023-07-03   ci(compose): use compose to deploy containers
+| * | 2b23ac4	2023-07-03   doc(readme): keep crontab info
+| * | 6dd3e95	2023-07-03   doc(readme): remove azure installation
+* | | 15370cb	2023-07-05   init local proc chain : add check function
+|/ /  
+* | 301bb77	2023-06-30   init global and local proc chain : updates and check functions
+* | 80754e0	2023-06-30   gee modis, landsat-s2 : updates
+* | b55eb8a	2023-06-29   gee landsat-s2: initialize and run functions
+* | d92554b	2023-06-27   init v2 global proc chain: add check function modis
+* | d2a069a	2023-06-27   init global proc chain : add check function modis
+* | 67affd0	2023-06-27   gee modis: float cast of indices
+* |   a892935	2023-06-26   Merge branch 'add-GEE-pipeline' of https://dev.azure.com/Oeilnc/EO4DM/_git/EO4DM into add-GEE-pipeline
+|\ \  
+| * | c4a3cd5	2023-06-26   feat(global): add global chain in CI
+* | | 0aba1bc	2023-06-26   environment: add lib versions
+|/ /  
+* | 34d8572	2023-06-26   Global Drought Processing chain
+* | eabd91c	2023-06-26   drought modis: complete global drought functions
+* | b19a937	2023-06-23   environment: add gee and pydrive libraries
+* | 563841b	2023-06-23   gee modis: complete initialize and run functions
+* | 74a5270	2023-06-23   ADD PROCESSING LANDSAT HISTO and S2 HISTO
+* | bcbcd46	2023-06-20   ci(example): update example schedule
+* | 65a8ffc	2023-06-20   ci(cron): make file compatible with Linux
+* | eb5c490	2023-06-20   doc(ci): explain how CI works
+* | ee00490	2023-06-20   ci(fix): add new line on crontab file
+* | b4ba04d	2023-06-20   ci(cron): use file to specify task scheduling
+* | cc4b2e9	2023-06-20   ci(cron): use crontab to schedule python scripts
+* | 582bda0	2023-06-20   ci(docker): use docker compose to deploy multiple pipelines
+* | 8385b6f	2023-06-20   ci(docker): create docker image with python scripts and conda env
+* | ba41ddc	2023-06-20   ci(agent): test connection with new agent on Insight server
+* | 9451619	2023-05-04   ADD L9 PROCESSING
+* | cc2f72a	2023-05-04   ADD L9 PROCESSING
+* | f4a57e3	2023-04-18   ADD PROCESSING LANDSAT HISTO and S2 HISTO
+* | cd7359e	2023-03-31   Process list of tiles - L7 Histo
+* | c25cd31	2023-03-30   Add L8 processing to compositing of last L7 dates
+* | 6d0580e	2023-03-27   Add compositing to L7 histo indices process script Add L8 processing collection script Add preprocessing functions script
+* | 28256c3	2023-03-17   Add python script with gee generic functions
+* | ff0f8af	2023-03-02   Update GEE-pipeline
+|/  
+* 10cbe9f	2022-12-16   Added eo4dm_service_key.json
+* 4cb6ee9	2022-12-16   Deleted GEE_Preprocessing_S2.py
+* 150aeb2	2022-12-16   Added GEE_Preprocessing_S2.py
+* 90fae6c	2022-12-16   Added GEE_Preprocessing_S2.py to /dmpipeline
+* fa43aeb	2022-11-14   Updated LocalDroughtIndex_histo.py
+* 2703902	2022-11-14   Updated GlobalDroughtIndex_histo.py
+* 87c11f6	2022-11-14   Updated AlertDrought_histo.py
+* e26e1b7	2022-10-17   Ajout local histo executable
+* 52f5ed6	2022-10-17   Ajout global histo executable
+* 41357ec	2022-10-17   Ajout alert histo executable
+* dbf8a30	2022-10-17   Version chaine Alerte SCO
+* 65140b3	2022-10-17   Test commit
+* 9ef9b05	2022-10-13   remove file
+* f59e5e8	2022-10-11   test
+* 75ae756	2022-08-10   Version chaine locale SCO
+*   2e72924	2022-01-21   Merge branch 'master' of gitlab.com:insightnc/eo4dm/dmpipeline
+|\  
+| * 96a67ef	2022-01-18   Suppression fonctions pour générer Land masques
+| * 11c79ac	2022-01-17   Changement nom fichiers indicateur global
+| * b5bd567	2022-01-14   Update indicateurs historiques Lecture land masks pré-calculés
+| * 134ab7c	2022-01-13   TESTS MODIFS
+* | edcaed0	2022-01-21   add alert executable
+|/  
+* e913313	2022-01-12   Initial commit
