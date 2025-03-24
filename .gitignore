@@ -2,3 +2,4 @@ build/
 dist/
 dmpipeline.egg-info/
 __pycache__/
+/.quarto/

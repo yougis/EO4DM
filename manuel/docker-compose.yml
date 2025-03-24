@@ -1,0 +1,139 @@
+version: '3.3'
+services:
+    eo4dm_global_processing_nc:
+        container_name: eo4dm_global_processing_nc
+        image: eo4dm_base
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SCRIPT_PATH=globalDM
+            - WRK_DIR=${WORK_DIR}
+            - DATA_HISTO_DIR=/mnt/geo-storage/EO4DM/DATA_HISTO
+            - ANNEX_DIR=/mnt/geo-storage/EO4DM/ANNEX
+            - TERRITORY="New Caledonia (Fr)"
+            - MODE=AUTO
+            - lon_min_modis=163.4629013478513571          
+            - lat_min_modis=-22.8619151394970714
+            - lon_max_modis=168.3033177518628349
+            - lat_max_modis=-19.4449057949627395
+            - DROUGHT_STATS=1
+        volumes:
+            - /mnt/geo-storage:/mnt/geo-storage
+    eo4dm_local_processing_nc:
+        container_name: eo4dm_local_processing_nc
+        image: eo4dm_base
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SCRIPT_PATH=localDM
+            - WRK_DIR=${WORK_DIR}
+            - DATA_HISTO_DIR=/mnt/geo-storage/EO4DM/DATA_HISTO
+            - ANNEX_DIR=/mnt/geo-storage/EO4DM/ANNEX
+            - TERRITORY="New Caledonia (Fr)"
+            - MODE=AUTO
+            - TILES_L=82075,81075,83074,82074,81074,80075,81076
+            - TILES_S2=58KCC,58KCD,58KDB,58KDC,58KEA,58KEB,58KEC,58KFA,58KFB,58KFC,58KGA,58KGB,58KGC,58KGV,58KHB
+        volumes:
+            - /mnt/geo-storage:/mnt/geo-storage
+    eo4dm_alert_processing_nc:
+        container_name: eo4dm_alert_processing_nc
+        image: eo4dm_base
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SCRIPT_PATH=alertDM
+            - WRK_DIR=${WORK_DIR}
+            - DATA_HISTO_DIR=/mnt/geo-storage/EO4DM/DATA_HISTO
+            - ANNEX_DIR=/mnt/geo-storage/EO4DM/ANNEX
+            - TERRITORY="New Caledonia (Fr)"
+            - MODE=AUTO
+            - DROUGHT_STATS=1
+        volumes:
+            - /mnt/geo-storage:/mnt/geo-storage
+    eo4dm_global_processing_fj:
+        container_name: eo4dm_global_processing_fj
+        image: eo4dm_base
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SCRIPT_PATH=globalDM
+            - WRK_DIR=${WORK_DIR}
+            - DATA_HISTO_DIR=/mnt/geo-storage/EO4DM/DATA_HISTO
+            - ANNEX_DIR=/mnt/geo-storage/EO4DM/ANNEX
+            - TERRITORY="Fiji"
+            - MODE=STOP
+            - DROUGHT_STATS=1
+            - KEY_STATS=shapeName
+        volumes:
+            - /mnt/geo-storage:/mnt/geo-storage
+    eo4dm_local_processing_fj:
+        container_name: eo4dm_local_processing_fj_t74072_t74073
+        image: eo4dm_base
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SCRIPT_PATH=localDM
+            - WRK_DIR=${WORK_DIR}
+            - DATA_HISTO_DIR=/mnt/geo-storage/EO4DM/DATA_HISTO
+            - ANNEX_DIR=/mnt/geo-storage/EO4DM/ANNEX
+            - TERRITORY="Fiji"
+            - MODE=STOP
+            - TILES_L=74072,74073
+        volumes:
+            - /mnt/geo-storage:/mnt/geo-storage
+    eo4dm_local_processing_fj_t75072:
+        container_name: eo4dm_local_processing_fj_t75072
+        image: eo4dm_base
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SCRIPT_PATH=localDM
+            - WRK_DIR=${WORK_DIR}
+            - DATA_HISTO_DIR=/mnt/geo-storage/EO4DM/DATA_HISTO
+            - ANNEX_DIR=/mnt/geo-storage/EO4DM/ANNEX
+            - TERRITORY="Fiji"
+            - MODE=STOP
+            - DRIVE_FOLDER=EO4DM_EXPORT_FJ_t75072
+            - TILES_L=75072
+        volumes:
+            - /mnt/geo-storage:/mnt/geo-storage
+    eo4dm_global_processing_vu:
+        container_name: eo4dm_global_processing_vu
+        image: eo4dm_base
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SCRIPT_PATH=globalDM
+            - WRK_DIR=${WORK_DIR}
+            - DATA_HISTO_DIR=/mnt/geo-storage/EO4DM/DATA_HISTO
+            - ANNEX_DIR=/mnt/geo-storage/EO4DM/ANNEX
+            - TERRITORY="Vanuatu"
+            - MODE=STOP
+            - DROUGHT_STATS=1
+            - KEY_STATS=Name
+        volumes:
+            - /mnt/geo-storage:/mnt/geo-storage
+    eo4dm_global_processing_pf:
+        container_name: eo4dm_global_processing_pf
+        image: eo4dm_base
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SCRIPT_PATH=globalDM
+            - WRK_DIR=${WORK_DIR}
+            - DATA_HISTO_DIR=/mnt/geo-storage/EO4DM/DATA_HISTO
+            - ANNEX_DIR=/mnt/geo-storage/EO4DM/ANNEX
+            - TERRITORY="French Polynesia (Fr)"
+            - MODE=STOP
+            - DROUGHT_STATS=1
+            - KEY_STATS=Name
+        volumes:
+            - /mnt/geo-storage:/mnt/geo-storage

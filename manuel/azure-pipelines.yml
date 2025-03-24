@@ -1,0 +1,41 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+variables:
+  isPROD: $[ne(variables['Build.SourceBranch'], 'refs/heads/master')]
+  orphanImages: echo $(docker images -f dangling=true -q)
+
+
+trigger:
+  branches:
+    include:
+    - master
+  tags:
+    include:
+    - 'v*.*.*'
+
+jobs:
+  - job: qualif
+    variables:
+      WORK_DIR: "/mnt/geo-storage/EO4DM/EO4DM_QUAL"
+    condition: eq(variables.isPROD, false)
+    displayName: "Déploiement sur le serveur de QUALIF"
+    pool:
+      name: Insight
+    steps:
+    - script: docker compose up -d --build --force-recreate
+      displayName: Launch EO4DM container
+    - script: docker rmi $(docker images -f dangling=true -q)
+      condition: ne(variables.orphanImages, '')
+      displayName: Remove orphan Docker images
+  - job: prod
+    variables:
+      WORK_DIR: "/mnt/geo-storage/EO4DM/EO4DM_PROD"
+    condition: eq(variables.isPROD, true)
+    displayName: "Déploiement sur le serveur de PROD"
+    pool:
+      name: Insight #TODO utiliser le pool créé pour le serveur de PROD d'Insight et y déployer un agent (cf. projet Backup sur comment déployer un agent)
+    steps:
+    - script: docker compose up -d --build --force-recreate
