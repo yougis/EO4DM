@@ -1,14 +1,3 @@
-# EO4DM PIPELINE
-
-## Table des Matières
-
-- [Présentation générale](#présentation-générale)
-- [Configuration Google Earth Engine (GEE)](#configuration-google-earth-engine-(gee))
-- [Utilisation "Test"](#utilisation-"test")
-- [Utilisation "Service-Régulier"](#utilisation-"service-régulier")
-- [Algorithmes](#algorithmes)
-- [Cas d'usages](#cas-d'usages)
-- [Intégration Continue (CI)](#intégration-continue-(ci))
 
 ## Présentation générale
 
@@ -47,7 +36,7 @@ Afin que la pipeline appelle correctement l'API, l'utilisateur doit au préalabl
 1) S'enregistrer sur GEE et créer un projet dédié à l'utilisation de la pipeline (cf. [Register](https://code.earthengine.google.com/register))
 2) Créer un compte de service Google dédié qui permettra l'authentification/initialisation automatique de l'API GEE à chaque lancement de la pipeline (cf. [Service Acccount](https://developers.google.com/earth-engine/guides/service_account))
 3) Générer une clé privée au format JSON contenant les identifiants du compte
-4) Placer la clé privée dans le dossier [gee_accounts](dmpipeline/GEE_Processing/gee_accounts) (cf. fichier exemple [eo4dm_service_key.json](dmpipeline/GEE_Processing/gee_accounts/eo4dm_service_key.json))
+4) Placer la clé privée dans le dossier [gee_accounts](dmpipeline/GEE_Processing/gee_accounts) 
 
 Depuis l'espace en ligne du projet GEE (Asset Manager, Code Editor) :
 1) Créer un nouveau dossier 'Annex' (cf. [Managing Assets](https://developers.google.com/earth-engine/guides/asset_manager))
@@ -262,9 +251,8 @@ Si un commit est poussé sur une autre branche que master ou si un tag est cré�
 Lorsqu'un commit est poussé sur le branche master, c'est le serveur de QUALIF qui est mis à jour.
 Lorsqu'un tag est poussé (au bon format), c'est le serveur de PROD qui est mis à jour.
 
-/!\ DOC PROJET BACKUP ??
+### Déploiement en PROD
 
-Pour l'instant, seul l'agent Azure du serveur de QUALIF a été déployé, le serveur de PROD n'étant pas encore disponible.
-Lorsque ce dernier sera disponible, il faudra créer un nouveau pool d'agent et y déployer un nouvel agent Azure dessus.
+Depuis Azure Devops, il faut créer un nouveau pool d'agent et y déployer un nouvel agent Azure dessus.
 Pour ce faire, il suffit de suivre la documentation du projet Backup (partie `Installation d'un agent Azure sur un serveur extérieur`).
-Il faudra ensuite modifier le fichier [azure-pipelines.yml](azure-pipelines.yml) de ce projet pour mettre à jour le nom du pool Azure dans le job qui déploie sur le serveur de PROD (cf. note #TODO).
+Il faudra ensuite modifier le fichier [azure-pipelines.yml](azure-pipelines.yml) de ce projet pour mettre à jour le nom du pool Azure dans le job qui déploie sur le serveur de PROD.
